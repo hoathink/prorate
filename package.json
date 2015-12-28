@@ -1,11 +1,9 @@
 {
   "name": "prorate",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Subscription payment calculations. Calculates upgrades, downgrades, and prorated amounts.",
   "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
+  "directories": {},
   "scripts": {
     "test": "mocha"
   },
@@ -23,5 +21,10 @@
     "lodash.isdate": "^3.0.1",
     "lodash.isnumber": "^3.0.1",
     "lodash.isundefined": "^3.0.1"
-  }
+  },
+  "homepage": "https://github.com/HOAThink/prorate",
+    "repository": {
+    "type": "git",
+    "url": "https://github.com/HOAThink/prorate.git"
+  },
 }
