@@ -1,0 +1,24 @@
+{
+  "name": "prorate",
+  "version": "0.0.1",
+  "description": "Subscription payment calculations.",
+  "main": "index.js",
+  "dependiences": {
+    "big.js": "^3.1.3",
+    },
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "subscription",
+    "payment",
+    "prorate",
+    "upgrade",
+    "downgrade"
+  ],
+  "author": "Dan Hollenbeck <dan@hollenbecks.com>",
+  "license": "MIT"
+}
