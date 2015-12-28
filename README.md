@@ -1,6 +1,6 @@
 # prorate
 
-Compute billing subscription upgrades, downgrades and prorated amounts. Uses Big.js to ensure accuracy of computations.
+Compute billing subscription upgrades, downgrades and prorated amounts. Uses Big.js to ensure accuracy of calculations.
 
 ## Installation
 
@@ -10,7 +10,7 @@ npm install prorate --save
 
 ## Usage
 
-When starting a subscription use the `amount` method to comute the amount to the bill the user.
+When starting a subscription use the `amount` method to comute the amount to bill the user.
 
 ```javascript
 var prorate = require('prorate');
