@@ -56,7 +56,7 @@ describe('Spec - features', function () {
 
 		var price = 100.00;
 		var percent = 0.75;
-		var expected = -75.00;
+		var expected = -25.00;
 		var amount = Prorate.cancel(percent, price);
 
 		assert.equal(amount, expected);

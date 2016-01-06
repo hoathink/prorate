@@ -77,7 +77,7 @@ exports.cancel = function(percentOfTime, planPrice){
 	amount = new Big(1);
 	amount = amount.sub(percentOfTime);
 	amount = amount.times(planPrice);
-	amount = amount.sub(planPrice);
+	amount = amount.times(-1);
 
 	str = amount.toFixed(2);
 
