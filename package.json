@@ -1,6 +1,6 @@
 {
   "name": "prorate",
-  "version": "0.1.1",
+  "version": "0.2.1",
   "description": "Subscription payment calculations. Calculates upgrades, downgrades, and prorated amounts.",
   "main": "index.js",
   "directories": {},

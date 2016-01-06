@@ -11,7 +11,7 @@ var isUndefined = require('lodash.isundefined');
 Big.DP = 20; //http://mikemcl.github.io/big.js/#dp
 Big.RM = 1; //http://mikemcl.github.io/big.js/#rm
 
-exports.amount = function(percentOfTime, planPrice){
+exports.signup = function(percentOfTime, planPrice){
 
 	var amount, str;
 
@@ -57,6 +57,29 @@ exports.change = function(percentOfTime, currentPlanPrice, newPlanPrice){
 	debit = debit.times(percentOfTime);
 	prorated = debit.sub(credit);
 	str = prorated.toFixed(2);
+
+	return 1 * str;
+};
+
+exports.cancel = function(percentOfTime, planPrice){
+
+	var amount, str;
+
+	//validate
+	Assert.ok(isNumber(percentOfTime), 'param `percentOfTime` must be a number.');
+	Assert.ok(percentOfTime >= 0, 'param `percentOfTime` must between 0 and 1.');
+	Assert.ok(percentOfTime <= 1, 'param `percentOfTime` must between 0 and 1.');
+
+	Assert.ok(isNumber(planPrice), 'param `planPrice` must be a number.');
+	Assert.ok(planPrice >= 0, 'param `planPrice` must be zero or greater.');
+
+	//calculate
+	amount = new Big(1);
+	amount = amount.sub(percentOfTime);
+	amount = amount.times(planPrice);
+	amount = amount.sub(planPrice);
+
+	str = amount.toFixed(2);
 
 	return 1 * str;
 };

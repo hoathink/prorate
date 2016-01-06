@@ -10,13 +10,13 @@ npm install prorate --save
 
 ## Usage
 
-When starting a subscription use the `amount` method to comute the amount to bill the user.
+When starting a subscription use the `signup` method to comute the amount to bill the user.
 
 ```javascript
 var prorate = require('prorate');
 var percent = prorate.monthPercentage(); //between 0 and 1
 var planPrice = 1.00;
-var amount = prorate.amount(percent, planPrie);
+var amount = prorate.signup(percent, planPrice);
 ```
 
 The usage for a subscription plan upgrade or downgrade is handled by the `change` method.
@@ -27,6 +27,15 @@ var percent = prorate.monthPercentage(); //between 0 and 1
 var planPrice1 = 1.00;
 var planPrice2 = 2.00;
 var amount = prorate.change(percent, planPrice1, planPrice2);
+```
+
+The usage for a subscription plan cancellation is handled by the `cancel` method.
+
+```javascript
+var prorate = require('prorate');
+var percent = prorate.monthPercentage(); //between 0 and 1
+var planPrice = 1.00;
+var amount = prorate.cancel(percent, planPrice);
 ```
 
 There is a convience method `monthPercentage` to aid in calculating the percentage of time.
@@ -41,6 +50,13 @@ var percentNow = prorate.monthPercentage();
 var date = new Date('December 17, 1995 03:24:00');
 var percentDate = prorate.monthPercentage(date);
 
+```
+
+## Tests
+```bash
+npm install -g mocha
+npm install -g chai
+mocha test
 ```
 
 ## Code Quality
